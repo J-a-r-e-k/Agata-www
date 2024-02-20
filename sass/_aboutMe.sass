@@ -1,0 +1,254 @@
+
+div.aboutMe
+    position: relative
+    display: flex
+    flex-direction: column
+
+    div.me
+        margin: 20px 0 20px 0
+        padding-top: 2%
+        text-align: center
+        font-size: 14px
+        word-spacing: 4px
+        letter-spacing: .7px
+        h1
+            padding: 10px 0 10px 0
+            @media screen and ( max-width: 920px)
+                font-size: 2.3em
+            @media screen and ( max-width: 520px )
+                font-size: 2.3em
+
+        p
+            padding: 5px 0 5px 0
+            @media screen and ( max-width: 920px)
+                font-size: 1.2em
+            @media screen and ( max-width: 520px )
+                font-size: 1.1em
+                padding: 2%
+
+    div.work
+        display: flex
+        justify-content: space-around
+        margin: 50px 0 50px 0
+        @media screen and ( max-width: 920px)
+            flex-direction: column
+            align-items: center
+            margin: 0
+        div
+            display: flex
+            flex-wrap: wrap
+            align-content: flex-start
+
+            width: 30%
+            
+            @media screen and ( max-width: 920px)
+                width: 40%
+                margin-top: 10px
+            @media screen and ( max-width: 520px )
+                width: 90%
+            
+
+            img
+                margin-right: 5%
+                width: 50px
+                height: 50px
+                margin-right: 5%
+                @media screen and ( max-width: 920px)
+
+                    
+
+            h2
+                line-height: 50px
+                margin-bottom: 10px
+                @media screen and ( max-width: 920px)
+                    font-size: 2em
+                @media screen and ( max-width: 520px )
+                    font-size: 1.7em
+            ul
+                width: 100%
+                li
+                    width: 60%
+                    margin: 0 auto
+                    margin-bottom: 7px
+                    padding-top: 10px
+                    white-space: nowrap
+                    @media screen and ( max-width: 920px)
+                        font-size: 1.5em
+                        padding-left: 5%
+                        
+                        
+                    @media screen and ( max-width: 520px )
+                        width: 70%
+                        font-size: 1.2em
+
+            p
+
+                line-height: 32px
+                @media screen and ( max-width: 920px)
+                    font-size: 1.3em
+                @media screen and ( max-width: 520px )
+                    font-size: 1.2em
+
+
+    div.btn_bio
+        display: flex
+        align-self: flex-end
+        padding-right: 100px
+        align-items: center
+        cursor: pointer
+
+        a
+            padding-left: 10px
+            @media screen and ( max-width: 920px)
+                font-size: 1.3em
+        @media screen and ( max-width: 520px)
+            padding-right: 5%
+
+            text-align: right
+
+    div.partner
+        position: relative
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        margin-left: 7%
+        margin-right: 3%
+        margin-top: 10vh 
+        @media screen and ( max-width: 920px)
+            margin-top: 0%
+        section
+            position: relative
+            display: flex
+            margin-top: 10px
+            @media screen and ( max-width: 920px)
+                flex-direction: column
+                align-items: center
+                
+            div.myPartnerInfo
+                width: 20vw
+                margin-top: 1.5vh
+
+                @media screen and ( max-width: 920px)
+                    width: 80vw
+                    margin-top: 5%
+                    text-align: center
+                    p
+                        font-size: 1.4em
+                    @media screen and ( max-width: 520px)
+                        font-size: .8em
+            div.brandPartner
+                margin: 0 auto
+                position: relative
+                width:50vw
+                overflow: hidden
+                
+                
+                span
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    border-radius: 20px
+                    padding: 0 20px
+                    text-align: center
+                    background-color:#ff00c999
+                    color: white
+                    line-height: 3vh
+                    white-space: nowrap
+                    animation: brand 10s infinite linear alternate
+                    @media screen and (max-width: 940px)
+                        padding: 5px 20px
+                        animation: brand-min 10s infinite linear alternate
+             
+                @media screen and ( max-width: 920px)
+                    width: 80vw
+                    height: 5vh
+                    font-size: 1.3em
+                    
+        section:nth-child(odd)
+            div.brandPartner
+                span 
+                    animation: brand 10s infinite linear alternate-reverse
+                    @media screen and (max-width: 940px)
+                        animation: brand-min 10s infinite linear alternate-reverse
+            @keyframes brand
+                0% 
+                    left: 130%
+                100%
+                    left: -30%
+            @keyframes brand-min
+                0% 
+                    left: 160%
+                100%
+                    left: -60%
+                            
+
+                
+
+    //* POPAP MOJE BIO
+    div.bio
+        position: fixed
+        top: 0
+        left: 0
+        height: 100vh
+        width: 100vw
+        z-index: 2
+        background-color: rgb(248, 248, 248)
+        display: none // zmienic fixed
+        align-items: center
+        justify-content: center
+    div.bio.activeBio
+        display: flex
+        @media screen and ( max-width: 1024px) and (orientation: portrait)
+            flex-direction: column-reverse
+
+        img
+
+            height: 40%
+            margin-left: 20px
+            @media screen and ( max-width: 540px)
+                height: 30%
+            @media screen and ( max-width: 1024px) and (orientation: portrait)
+                height: 27%
+
+        section
+            position: relative
+            margin: 0 30px 0 50px
+            width: 40%
+            i
+                position: absolute
+                top: 0
+                right: 0
+                transform: translateY(-80%)
+                font-size: 2.2em
+                cursor: pointer
+                color: #000
+
+            @media screen and ( max-width: 1024px)
+                width: 80%
+            @media screen and ( max-width: 920px ) and (orientation: landscape)
+                width: 60%
+
+            @media screen and ( max-width: 540px)
+                margin: 0 10px
+                width: 95%
+
+        p
+            padding-top: 15px
+            line-height: 120%
+            font-size: 1.3em
+            @media screen and ( max-width: 920px)
+                text-align: center
+            @media screen and ( max-width: 1024px ) and (orientation: landscape)
+                font-size: 1.3em
+            @media screen and ( max-width: 940px ) and (orientation: landscape)
+                font-size: .9em
+            @media screen and ( max-width: 540px)
+                font-size: .9em
+            @media screen and ( max-width: 720px ) and (orientation: landscape)
+                font-size: .8em
+
+            span
+                font-weight: bolder
+
+    //* END POPAP MOJE BIO 

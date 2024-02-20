@@ -1,0 +1,1079 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  font-family: nowregular, Arial, Helvetica, sans-serif;
+}
+* h1 {
+  font-weight: normal;
+}
+* h2 {
+  font-weight: normal;
+}
+@font-face {
+  font-family: "nowregular";
+  src: url("./now/now-regular-webfont.woff2") format("woff2"), url("css/now/now-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "bold";
+  src: url("./now/now-medium-webfont.woff2") format("woff2"), url("css/now/now-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  max-width: 1920px;
+  width: 100vw;
+  margin: 0 auto;
+}
+body main {
+  max-width: 1200px;
+  width: 100vw;
+  overflow: hidden;
+  margin: 0px auto 0 auto;
+}
+body main aside.nameSection {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10%;
+}
+@media screen and (max-width: 920px) {
+  body main aside.nameSection {
+    margin: 5% 5% 5% 5%;
+  }
+}
+body main aside.nameSection img {
+  height: 50px;
+}
+body main aside.nameSection p {
+  font-size: 1.2em;
+  margin-left: 10px;
+}
+@media screen and (max-width: 920px) {
+  body main aside.nameSection p {
+    font-size: 1.5em;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 920px) and (orientation: landscape) {
+  body main aside.nameSection p {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 520px) {
+  body main aside.nameSection p {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 920px) and (orientation: landscape) {
+  body main aside.nameSection p {
+    font-size: 1.2em;
+  }
+}
+body main aside.nameSection.detail {
+  margin-bottom: 55px;
+  -webkit-transform: translateY(-30px);
+      -ms-transform: translateY(-30px);
+          transform: translateY(-30px);
+}
+body main aside.nameSection.detail img {
+  -webkit-transform: translateY(17px);
+      -ms-transform: translateY(17px);
+          transform: translateY(17px);
+}
+body main aside.nameSection.detail a {
+  width: 130px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+@media screen and (max-width: 920px) {
+  body main aside.nameSection.detail a {
+    font-size: 1.3em;
+    width: 20vw;
+  }
+}
+@media screen and (max-width: 520px) {
+  body main aside.nameSection.detail a {
+    width: 35vw;
+    font-size: 1em;
+  }
+}
+
+header {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(217, 217, 217);
+  margin: 0 auto;
+}
+header nav {
+  position: fixed;
+  height: 100px;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 30px 0 30px;
+  background-color: rgb(248, 248, 248);
+}
+@media screen and (max-width: 940px) {
+  header nav {
+    height: 0px;
+  }
+}
+header nav div.burger {
+  display: none;
+}
+@media screen and (max-width: 940px) {
+  header nav {
+    background-color: rgb(248, 248, 248);
+    position: absolute;
+  }
+  header nav div.burger {
+    position: fixed;
+    top: 3vh;
+    left: 5vw;
+    display: block;
+    font-size: 3em;
+    z-index: 3;
+  }
+}
+@media screen and (max-width: 940px) and (max-width: 920px) and (orientation: landscape) {
+  header nav div.burger {
+    font-size: 2em;
+    right: 3%;
+  }
+}
+@media screen and (max-width: 940px) and (max-width: 520px) {
+  header nav div.burger {
+    font-size: 2em;
+  }
+}
+header nav div.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80%;
+  width: 30%;
+  overflow: hidden;
+}
+@media screen and (max-width: 940px) {
+  header nav div.logo {
+    position: absolute;
+    top: 5vw;
+    left: 30%;
+    height: 10vh;
+    width: 75vw;
+  }
+}
+@media screen and (max-width: 940px) and (max-width: 940px) and (orientation: landscape) {
+  header nav div.logo {
+    top: 3vh;
+    left: 30vw;
+    height: 10vw;
+    width: 50vw;
+  }
+}
+@media screen and (max-width: 940px) and (max-width: 540px) {
+  header nav div.logo {
+    left: 20%;
+  }
+}
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media screen and (max-width: 940px) {
+  header nav ul {
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: rgb(248, 248, 248);
+    width: 40vw;
+  }
+}
+@media screen and (max-width: 520px) {
+  header nav ul {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 940px) and (orientation: landscape) {
+  header nav ul {
+    top: 20%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 70%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+header nav ul li {
+  padding: 20px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: #000;
+  cursor: pointer;
+}
+@media screen and (max-width: 940px) {
+  header nav ul li {
+    width: 80%;
+    line-height: 270%;
+    border-bottom: solid 2px black;
+    margin: 0 auto;
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 940px) and (orientation: landscape) {
+  header nav ul li {
+    width: auto;
+    line-height: 300%;
+  }
+}
+header nav ul.activeBurger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+header section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+header section img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 25%;
+}
+@media screen and (max-width: 920px) {
+  header section img {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 920px) and (orientation: landscape) {
+  header section img {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 520px) {
+  header section img {
+    width: 70%;
+  }
+}
+
+div.aboutMe {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+div.aboutMe div.me {
+  margin: 20px 0 20px 0;
+  padding-top: 2%;
+  text-align: center;
+  font-size: 14px;
+  word-spacing: 4px;
+  letter-spacing: 0.7px;
+}
+div.aboutMe div.me h1 {
+  padding: 10px 0 10px 0;
+}
+@media screen and (max-width: 920px) {
+  div.aboutMe div.me h1 {
+    font-size: 2.3em;
+  }
+}
+@media screen and (max-width: 520px) {
+  div.aboutMe div.me h1 {
+    font-size: 2.3em;
+  }
+}
+div.aboutMe div.me p {
+  padding: 5px 0 5px 0;
+}
+@media screen and (max-width: 920px) {
+  div.aboutMe div.me p {
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 520px) {
+  div.aboutMe div.me p {
+    font-size: 1.1em;
+    padding: 2%;
+  }
+}
+div.aboutMe div.work {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 50px 0 50px 0;
+}
+@media screen and (max-width: 920px) {
+  div.aboutMe div.work {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
+  }
+}
+div.aboutMe div.work div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  width: 30%;
+}
+@media screen and (max-width: 920px) {
+  div.aboutMe div.work div {
+    width: 40%;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 520px) {
+  div.aboutMe div.work div {
+    width: 90%;
+  }
+}
+div.aboutMe div.work div img {
+  margin-right: 5%;
+  width: 50px;
+  height: 50px;
+  margin-right: 5%;
+}
+div.aboutMe div.work div h2 {
+  line-height: 50px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 920px) {
+  div.aboutMe div.work div h2 {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 520px) {
+  div.aboutMe div.work div h2 {
+    font-size: 1.7em;
+  }
+}
+div.aboutMe div.work div ul {
+  width: 100%;
+}
+div.aboutMe div.work div ul li {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 7px;
+  padding-top: 10px;
+  white-space: nowrap;
+}
+@media screen and (max-width: 920px) {
+  div.aboutMe div.work div ul li {
+    font-size: 1.5em;
+    padding-left: 5%;
+  }
+}
+@media screen and (max-width: 520px) {
+  div.aboutMe div.work div ul li {
+    width: 70%;
+    font-size: 1.2em;
+  }
+}
+div.aboutMe div.work div p {
+  line-height: 32px;
+}
+@media screen and (max-width: 920px) {
+  div.aboutMe div.work div p {
+    font-size: 1.3em;
+  }
+}
+@media screen and (max-width: 520px) {
+  div.aboutMe div.work div p {
+    font-size: 1.2em;
+  }
+}
+div.aboutMe div.btn_bio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding-right: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+div.aboutMe div.btn_bio a {
+  padding-left: 10px;
+}
+@media screen and (max-width: 920px) {
+  div.aboutMe div.btn_bio a {
+    font-size: 1.3em;
+  }
+}
+@media screen and (max-width: 520px) {
+  div.aboutMe div.btn_bio {
+    padding-right: 5%;
+    text-align: right;
+  }
+}
+div.aboutMe div.partner {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-left: 7%;
+  margin-right: 3%;
+  margin-top: 10vh;
+}
+@media screen and (max-width: 920px) {
+  div.aboutMe div.partner {
+    margin-top: 0%;
+  }
+}
+div.aboutMe div.partner section {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+}
+@media screen and (max-width: 920px) {
+  div.aboutMe div.partner section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+div.aboutMe div.partner section div.myPartnerInfo {
+  width: 20vw;
+  margin-top: 1.5vh;
+}
+@media screen and (max-width: 920px) {
+  div.aboutMe div.partner section div.myPartnerInfo {
+    width: 80vw;
+    margin-top: 5%;
+    text-align: center;
+  }
+  div.aboutMe div.partner section div.myPartnerInfo p {
+    font-size: 1.4em;
+  }
+}
+@media screen and (max-width: 920px) and (max-width: 520px) {
+  div.aboutMe div.partner section div.myPartnerInfo {
+    font-size: 0.8em;
+  }
+}
+div.aboutMe div.partner section div.brandPartner {
+  margin: 0 auto;
+  position: relative;
+  width: 50vw;
+  overflow: hidden;
+}
+div.aboutMe div.partner section div.brandPartner span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 20px;
+  padding: 0 20px;
+  text-align: center;
+  background-color: rgba(255, 0, 201, 0.6);
+  color: white;
+  line-height: 3vh;
+  white-space: nowrap;
+  -webkit-animation: brand 10s infinite linear alternate;
+          animation: brand 10s infinite linear alternate;
+}
+@media screen and (max-width: 940px) {
+  div.aboutMe div.partner section div.brandPartner span {
+    padding: 5px 20px;
+    -webkit-animation: brand-min 10s infinite linear alternate;
+            animation: brand-min 10s infinite linear alternate;
+  }
+}
+@media screen and (max-width: 920px) {
+  div.aboutMe div.partner section div.brandPartner {
+    width: 80vw;
+    height: 5vh;
+    font-size: 1.3em;
+  }
+}
+div.aboutMe div.partner section:nth-child(odd) div.brandPartner span {
+  animation: brand 10s infinite linear alternate-reverse;
+}
+@media screen and (max-width: 940px) {
+  div.aboutMe div.partner section:nth-child(odd) div.brandPartner span {
+    animation: brand-min 10s infinite linear alternate-reverse;
+  }
+}
+@-webkit-keyframes brand {
+  0% {
+    left: 130%;
+  }
+  100% {
+    left: -30%;
+  }
+}
+@keyframes brand {
+  0% {
+    left: 130%;
+  }
+  100% {
+    left: -30%;
+  }
+}
+@-webkit-keyframes brand-min {
+  0% {
+    left: 160%;
+  }
+  100% {
+    left: -60%;
+  }
+}
+@keyframes brand-min {
+  0% {
+    left: 160%;
+  }
+  100% {
+    left: -60%;
+  }
+}
+div.aboutMe div.bio {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+  background-color: rgb(248, 248, 248);
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+div.aboutMe div.bio.activeBio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+  div.aboutMe div.bio.activeBio {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+div.aboutMe div.bio.activeBio img {
+  height: 40%;
+  margin-left: 20px;
+}
+@media screen and (max-width: 540px) {
+  div.aboutMe div.bio.activeBio img {
+    height: 30%;
+  }
+}
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+  div.aboutMe div.bio.activeBio img {
+    height: 27%;
+  }
+}
+div.aboutMe div.bio.activeBio section {
+  position: relative;
+  margin: 0 30px 0 50px;
+  width: 40%;
+}
+div.aboutMe div.bio.activeBio section i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: translateY(-80%);
+      -ms-transform: translateY(-80%);
+          transform: translateY(-80%);
+  font-size: 2.2em;
+  cursor: pointer;
+  color: #000;
+}
+@media screen and (max-width: 1024px) {
+  div.aboutMe div.bio.activeBio section {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 920px) and (orientation: landscape) {
+  div.aboutMe div.bio.activeBio section {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 540px) {
+  div.aboutMe div.bio.activeBio section {
+    margin: 0 10px;
+    width: 95%;
+  }
+}
+div.aboutMe div.bio.activeBio p {
+  padding-top: 15px;
+  line-height: 120%;
+  font-size: 1.3em;
+}
+@media screen and (max-width: 920px) {
+  div.aboutMe div.bio.activeBio p {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  div.aboutMe div.bio.activeBio p {
+    font-size: 1.3em;
+  }
+}
+@media screen and (max-width: 940px) and (orientation: landscape) {
+  div.aboutMe div.bio.activeBio p {
+    font-size: 0.9em;
+  }
+}
+@media screen and (max-width: 540px) {
+  div.aboutMe div.bio.activeBio p {
+    font-size: 0.9em;
+  }
+}
+@media screen and (max-width: 720px) and (orientation: landscape) {
+  div.aboutMe div.bio.activeBio p {
+    font-size: 0.8em;
+  }
+}
+div.aboutMe div.bio.activeBio p span {
+  font-weight: bolder;
+}
+
+div.cooperationMe {
+  padding-top: 2%;
+}
+div.cooperationMe ul.taskCooperation {
+  margin: 0 auto 0 auto;
+}
+div.cooperationMe ul.taskCooperation li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 15%;
+}
+@media screen and (max-width: 920px) {
+  div.cooperationMe ul.taskCooperation li {
+    margin-left: 5%;
+  }
+}
+@media screen and (max-width: 520px) {
+  div.cooperationMe ul.taskCooperation li {
+    margin-right: 5%;
+  }
+}
+div.cooperationMe ul.taskCooperation li p {
+  padding-left: 10px;
+}
+@media screen and (max-width: 920px) {
+  div.cooperationMe ul.taskCooperation li p {
+    font-size: 1.3em;
+    line-height: 60px;
+  }
+}
+@media screen and (max-width: 520px) {
+  div.cooperationMe ul.taskCooperation li p {
+    font-size: 1em;
+    line-height: 30px;
+  }
+}
+div.cooperationMe ul.taskCooperation li img {
+  height: 40px;
+}
+@media screen and (max-width: 920px) {
+  div.cooperationMe ul.taskCooperation li img {
+    height: 50px;
+  }
+}
+div.cooperationMe div.meProposal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 70vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media screen and (max-width: 520px) {
+  div.cooperationMe div.meProposal {
+    height: 100vh;
+  }
+}
+div.cooperationMe div.meProposal article {
+  position: relative;
+  width: 30%;
+}
+@media screen and (max-width: 920px) {
+  div.cooperationMe div.meProposal article {
+    height: auto;
+    width: 49%;
+  }
+}
+@media screen and (max-width: 920px) and (orientation: landscape) {
+  div.cooperationMe div.meProposal article {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 520px) {
+  div.cooperationMe div.meProposal article {
+    width: 70%;
+  }
+}
+div.cooperationMe div.meProposal article img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 80%;
+}
+div.cooperationMe div.meProposal article ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+}
+div.cooperationMe div.meProposal article ul li {
+  text-align: center;
+  line-height: 130%;
+  font-size: 1.5em;
+}
+@media screen and (max-width: 920px) {
+  div.cooperationMe div.meProposal article ul li {
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 940px) and (orientation: landscape) {
+  div.cooperationMe div.meProposal article ul li {
+    font-size: 1em;
+  }
+}
+
+div.you {
+  padding-top: 3%;
+}
+div.you aside.nameSection.youChange p {
+  max-width: 300px;
+  text-align: right;
+  line-height: 20px;
+}
+@media screen and (max-width: 920px) {
+  div.you aside.nameSection.youChange p {
+    max-width: 80%;
+    width: auto;
+    line-height: 30px;
+  }
+}
+@media screen and (max-width: 520px) {
+  div.you aside.nameSection.youChange p {
+    font-size: 1em;
+    line-height: 20px;
+    max-width: 60%;
+  }
+}
+div.you div.wrapChange {
+  max-width: 1000px;
+  margin: 0 auto 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (max-width: 520px) {
+  div.you div.wrapChange {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+div.you div.wrapChange section.change {
+  position: relative;
+  width: 15%;
+  height: 50vh;
+}
+@media screen and (max-width: 920px) {
+  div.you div.wrapChange section.change {
+    width: 18%;
+  }
+}
+@media screen and (max-width: 520px) {
+  div.you div.wrapChange section.change {
+    height: 15vh;
+  }
+}
+div.you div.wrapChange section.change img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(40%, -300%);
+      -ms-transform: translate(40%, -300%);
+          transform: translate(40%, -300%);
+}
+@media screen and (max-width: 520px) {
+  div.you div.wrapChange section.change img {
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+    left: 85%;
+    top: 90%;
+  }
+}
+div.you div.wrapChange section.change img.imgSpiral {
+  -webkit-transform: translate(20%, -200%);
+      -ms-transform: translate(20%, -200%);
+          transform: translate(20%, -200%);
+}
+@media screen and (max-width: 520px) {
+  div.you div.wrapChange section.change img.imgSpiral {
+    -webkit-transform: rotate(105deg);
+        -ms-transform: rotate(105deg);
+            transform: rotate(105deg);
+    left: 85%;
+    top: 85%;
+  }
+}
+div.you div.wrapChange section.change ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+div.you div.wrapChange section.change ul p {
+  text-align: center;
+  min-width: 100px;
+  line-height: 25px;
+  font-size: 1.3em;
+}
+@media screen and (max-width: 920px) {
+  div.you div.wrapChange section.change ul p {
+    font-size: 1.4em;
+  }
+}
+@media screen and (max-width: 520px) {
+  div.you div.wrapChange section.change ul p {
+    font-size: 1.2em;
+  }
+}
+
+div.recruitment {
+  margin: 0 5%;
+  padding-top: 3%;
+}
+div.recruitment div.currentRecrutment {
+  margin: 0 auto 0 auto;
+  max-width: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+div.recruitment div.currentRecrutment article {
+  width: 25vw;
+}
+@media screen and (max-width: 920px) {
+  div.recruitment div.currentRecrutment {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  div.recruitment div.currentRecrutment article {
+    width: 40vw;
+  }
+}
+div.recruitment div.currentRecrutment li {
+  text-align: center;
+  font-size: 25px;
+}
+div.recruitment div.currentRecrutment h1 {
+  padding: 7%;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+div.talkMe {
+  position: relative;
+  height: 85vh;
+  padding-top: 2%;
+}
+@media screen and (max-width: 920px) and (orientation: landscape) {
+  div.talkMe {
+    height: 100vh;
+  }
+}
+div.talkMe div.wrapTalk {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (max-width: 920px) and (orientation: landscape) {
+  div.talkMe div.wrapTalk {
+    left: 35%;
+  }
+}
+div.talkMe div.wrapTalk section {
+  margin-top: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media screen and (max-width: 520px) {
+  div.talkMe div.wrapTalk section {
+    width: 80vw;
+  }
+}
+div.talkMe div.wrapTalk img {
+  width: 30%;
+  margin-right: 5%;
+}
+div.talkMe div.wrapTalk a {
+  -webkit-transform: translateY(30%);
+      -ms-transform: translateY(30%);
+          transform: translateY(30%);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+div.blog {
+  padding-top: 2%;
+  min-height: 100vh;
+}
+div.blog div.wrapBlog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 5%;
+}
+div.blog div.wrapBlog article {
+  width: 30%;
+}
+@media screen and (max-width: 920px) {
+  div.blog div.wrapBlog article {
+    width: 40%;
+  }
+}
+div.blog div.wrapBlog article h2 {
+  text-align: center;
+  line-height: 250%;
+  display: block;
+}
+div.blog div.wrapBlog article img {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 520px) {
+  div.blog div.wrapBlog article img {
+    width: 80%;
+  }
+}/*# sourceMappingURL=typowaHR.css.map */
